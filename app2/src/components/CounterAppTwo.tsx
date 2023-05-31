@@ -15,7 +15,7 @@ const Counter = () => {
       </Button>
       {location.pathname !== "/" && (
         <Button as={Link} to="/">
-          Back to container
+          Back to shell
         </Button>
       )}
     </Flex>

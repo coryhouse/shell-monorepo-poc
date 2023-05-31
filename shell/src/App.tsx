@@ -1,6 +1,6 @@
 import React, { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import { ContainerApp } from "./components/ContainerApp";
+import { ShellApp } from "./components/ShellApp";
 
 const CounterAppOne = lazy(() => import("app1/CounterAppOne"));
 const CounterAppTwo = lazy(() => import("app2/CounterAppTwo"));
@@ -12,7 +12,7 @@ export default function App() {
         <Route
           path="/"
           element={
-            <ContainerApp
+            <ShellApp
               CounterAppOne={CounterAppOne}
               CounterAppTwo={CounterAppTwo}
             />

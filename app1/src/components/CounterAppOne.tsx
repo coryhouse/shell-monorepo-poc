@@ -18,7 +18,7 @@ export default function Counter(props: Props) {
       <Button onClick={() => setCount(count + 1)}>Click me</Button>
       {location.pathname !== "/" && (
         <Button as={Link} to="/">
-          Back to container
+          Back to shell
         </Button>
       )}
     </Flex>

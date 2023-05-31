@@ -14,17 +14,14 @@ import { Link as RouterLink } from "react-router-dom";
 
 var version = process.env.BUILD_DATE;
 
-type ContainerAppProps = {
+type ShellAppProps = {
   CounterAppOne: React.LazyExoticComponent<
     React.ComponentType<{ parentCount?: number }>
   >;
   CounterAppTwo: React.LazyExoticComponent<React.ComponentType<{}>>;
 };
 
-export const ContainerApp = ({
-  CounterAppOne,
-  CounterAppTwo,
-}: ContainerAppProps) => {
+export const ShellApp = ({ CounterAppOne, CounterAppTwo }: ShellAppProps) => {
   const [count, setCount] = useState(0);
 
   return (
@@ -48,8 +45,8 @@ export const ContainerApp = ({
         padding="5rem"
         backgroundColor="#6F60EA"
       >
-        <Heading color="#fff">CONTAINER</Heading>
-        <Text color="white">Container click count: {count}</Text>
+        <Heading color="#fff">SHELL</Heading>
+        <Text color="white">Shell click count: {count}</Text>
         <Button onClick={() => setCount((prevState) => prevState + 1)}>
           Click me
         </Button>
