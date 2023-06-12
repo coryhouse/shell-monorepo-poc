@@ -16,6 +16,7 @@ var version = process.env.BUILD_DATE;
 
 type ShellAppProps = {
   CounterAppOne: React.LazyExoticComponent<
+    // Specify the props the remote accepts here
     React.ComponentType<{ parentCount?: number }>
   >;
   CounterAppTwo: React.LazyExoticComponent<React.ComponentType<{}>>;
